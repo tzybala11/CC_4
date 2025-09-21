@@ -34,3 +34,19 @@ for (const product of products) {
 };
 
 console.log(products);
+
+//Step 4: Customer Discounts
+const customerType = ["member","silver","gold","platinum"]; //Member: 0%, Silver: 2%, Gold: 5%, Platinum: 10%
+if (customerType === "platinum") {
+    total = subTotal * 0.10;
+    console.log(`Thank you for being a Platinum member! A 10% discount has been applied to your transaction: ${total}`);
+} else if (customerType === "gold") {
+    total = subTotal * 0.05;
+    console.log(`Thank you for being a Platinum member! A 5% discount has been applied to your transaction: ${total}`);
+} else if (customerType === "silver") {
+    total = subTotal * 0.02;
+    console.log(`Thank you for being a Platinum member! A 2% discount has been applied to your transaction: ${total}`);
+} else if (customerType === "member") {
+    total = subTotal;
+    console.log(`Thank you for being a Member! Your total today is: ${total}`);
+};
