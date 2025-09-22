@@ -49,14 +49,27 @@ if (customerType === "platinum") {
     console.log(`Thank you for being a Member!`);
 };
 
-//Step 5: Simulated Checkout Process & Inventory Updates
-for (subtotal = 0; subtotal < 3; subtotal++) {
-    console.log("subtotal" + subtotal)
+//Step 5: Simulated Checkout Process & Inventory Update
+for (let i = 1; i <= 3; i++) {
+    subtotal = 0;
+    extraDiscount = 0.05;
+    for (const product of products) {
+        subtotal = products[0].price + products[2].price
+        product.inventory--
+    };
 };
+
+let finalTotal = subtotal * (1 - extraDiscount);
+
+console.log("final-total:" + finalTotal.toFixed(2));
+console.log("pasta-inventory:" + products[0].inventory);
+console.log("shirt-inventory:" + products[2].inventory);
+
 //Step 6: Logging Key/Value Pairs
 for (let key in products[0]) {
     console.log(key + ": " + products[0][key]);
 };
+
 //Step 7: Object.entries() and Destructuring
 for (const [key, value] of Object.entries(products[1])) {
     console.log(key + ": " + value);
