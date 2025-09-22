@@ -57,4 +57,7 @@ for (subtotal = 0; subtotal < 3; subtotal++) {
 for (let key in products[0]) {
     console.log(key + ": " + products[0][key]);
 };
-//Step 7: Object.entries() and destructuring
+//Step 7: Object.entries() and Destructuring
+for (const [key, value] of Object.entries(products[1])) {
+    console.log(key + ": " + value);
+};
